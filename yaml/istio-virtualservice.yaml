@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: messaging
+  namespace: default
+spec:
+  hosts: ["app.<DOMAIN>"]
+  gateways: [ "gateway-app" ]
+  http:
+    - match:
+      - uri:
+          prefix: "/socket.io"
+      rewrite:
+        uri: "/socket.io"
+      route:
+        - destination:
+            host: home

@@ -1,0 +1,26 @@
+{
+  "name": "thindexed",
+  "version": "1.1.40",
+  "description": "Thindexed. A browser based circuit simulator which is able to run on a raspi with a node.js backend and has access to the GPIO pins.",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "dev:server": "nodemon --ignore sessions/ ./app/backend/index.js --storage single-user"
+  },
+  "repository": "git+https://github.com/thindexed",
+  "keywords": [],
+  "author": "Andreas Herz (FreeGroup)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thindexed/messaging/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "prompt": "1.0.0",
+    "request": "^2.88.2",
+    "socket.io": "^4.4.1"
+  },
+  "homepage": "https://github.com/thindexed/"
+}

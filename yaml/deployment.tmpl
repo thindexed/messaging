@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: messaging
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: messaging
+  template:
+    metadata:
+      labels:
+        name: messaging
+    spec:
+      containers:
+      - name: messaging
+        image: <image-name>
