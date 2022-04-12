@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: messaging
-        image: docker.io/freegroup/thindexed-messaging:0.1.0-1
+        image: <OCIIMAGE>
